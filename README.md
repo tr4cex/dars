@@ -36,22 +36,48 @@ Drop in lecture slides, scanned notes, spreadsheets or web pages, ask questions 
 
 ## Quick start
 
+You need Python 3.10 or newer and a free Gemini API key.
+
+**1. Get a Gemini API key**
+
+1. Open [Google AI Studio](https://aistudio.google.com/apikey) and sign in with a Google account.
+2. Click **Create API key** and pick (or create) a project.
+3. Copy the key. The free tier is enough for personal study use.
+
+Each key has its own rate limit, so you can create a few keys (from different projects) and Dars will rotate between them automatically.
+
+**2. Install**
+
 ```bash
-git clone <your-repo-url> dars
+git clone https://github.com/tr4cex/dars.git
 cd dars
 pip3 install -r requirements.txt
 cp .env.example .env
 ```
 
-Add one or more Gemini API keys to `.env` (comma separated, extra keys raise your rate limit), then:
+**3. Add your key**
+
+Open `.env` and replace the placeholder. Separate several keys with commas:
+
+```
+GEMINI_API_KEYS=AIza...your_first_key,AIza...your_second_key
+```
+
+**4. Run**
 
 ```bash
 ./run.sh
 ```
 
-Open http://localhost:8000.
+Open http://localhost:8000, create a subject, drop in a file and start asking. To use another port run `PORT=9000 ./run.sh`.
 
 React, htm and Tailwind are vendored in `frontend/assets/vendor`, so the interface works offline. Fonts and math rendering (KaTeX) load from a CDN and degrade gracefully without it.
+
+**Troubleshooting**
+
+- `429` or "quota" errors: you hit a key's rate limit. Wait a minute or add more keys.
+- A file stays on "Failed": open the Library, check the message on the card and press retry. Scanned PDFs need a working key because pages are read with vision.
+- `Address already in use`: another program is using the port, start Dars with a different `PORT`.
 
 ## Configuration
 
