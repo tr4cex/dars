@@ -1,0 +1,57 @@
+tailwind.config = {
+  corePlugins: { container: false },
+  theme: {
+    extend: {
+      colors: {
+        bg: "var(--bg)",
+        bg2: "var(--bg-2)",
+        surface: "var(--surface)",
+        surface2: "var(--surface-2)",
+        surface3: "var(--surface-3)",
+        line: "var(--line)",
+        line2: "var(--line-2)",
+        ink: "var(--text)",
+        ink2: "var(--text-2)",
+        muted: "var(--muted)",
+        faint: "var(--faint)",
+        accent: "var(--accent)",
+        ember: "var(--accent-2)",
+        btn: "var(--btn)",
+        btnink: "var(--btn-ink)",
+        soft: "var(--accent-soft)",
+        onaccent: "var(--accent-ink)",
+        good: "var(--good)",
+        goodsoft: "var(--good-soft)",
+        bad: "var(--bad)",
+        badsoft: "var(--bad-soft)",
+        glass: "var(--glass)",
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        ui: ["var(--font-ui)"],
+        mono: ["var(--font-mono)"],
+      },
+      boxShadow: {
+        float: "var(--shadow)",
+        accent: "0 12px 28px -10px var(--accent-2), inset 0 1px 0 rgba(255,255,255,.4)",
+        glow: "0 18px 36px -12px var(--accent-2), inset 0 1px 0 rgba(255,255,255,.45)",
+      },
+      transitionTimingFunction: {
+        out: "var(--ease)",
+        spring: "var(--spring)",
+      },
+      animation: {
+        rise: "rise .5s var(--ease) both",
+        fade: "fade .4s ease both",
+        pop: "popin .3s var(--ease) both",
+                blink: "blink 1s steps(2) infinite",
+      },
+      keyframes: {
+        rise: { from: { opacity: 0, transform: "translateY(8px)" }, to: { opacity: 1, transform: "none" } },
+        fade: { from: { opacity: 0 }, to: { opacity: 1 } },
+        popin: { from: { opacity: 0, transform: "translateY(8px) scale(.985)" }, to: { opacity: 1, transform: "none" } },
+        blink: { "50%": { opacity: 0 } },
+      },
+    },
+  },
+};
