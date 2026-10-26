@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/logo.png" alt="Dars" width="360"></p>
+
 # Dars
 
 An AI study assistant that reads your course material and answers from it, with the exact file and page for every claim.

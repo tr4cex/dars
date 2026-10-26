@@ -21,7 +21,7 @@ function AssistantMessage({ m, onCite, onOpen, onCopy }) {
   const sources = (m.sources || []).slice(0, 6);
   return html`
     <div className="group/msg flex animate-rise gap-4 max-[860px]:gap-3">
-      <div className="mt-0.5 grid size-[34px] flex-none place-items-center rounded-xl border border-line2 bg-surface2 max-[860px]:size-[30px]"><${Icon} n="logo" className="size-5 text-accent" /></div>
+      <div className="mt-0.5 grid size-[34px] flex-none place-items-center rounded-xl border border-line2 bg-surface2 max-[860px]:size-[30px]"><img src="/assets/logo-mark.png" alt="" className="size-[22px] object-contain" /></div>
       <div className="min-w-0 flex-1">
         <div className="mb-1.5 flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[.12em] text-faint">
           <span>Dars</span>

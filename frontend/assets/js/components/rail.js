@@ -23,7 +23,7 @@ export function Rail() {
   return html`
     <aside className="rail flex min-h-0 flex-col gap-1.5 border-r border-line bg-gradient-to-b from-glass to-transparent px-4 pb-4 pt-[22px] backdrop-blur-[28px] backdrop-saturate-150">
       <button className="flex items-center gap-3 px-2 pb-[18px] pt-1 text-left" onClick=${() => A.selectSubject(null)} aria-label="Home">
-        <div className="grid size-[42px] shrink-0 place-items-center rounded-xl border border-line2 bg-surface2"><${Icon} n="logo" className="size-[24px] text-accent" /></div>
+        <div className="grid size-[42px] shrink-0 place-items-center rounded-xl border border-line2 bg-surface2"><img src="/assets/logo-mark.png" alt="" className="size-[26px] object-contain" /></div>
         <div className="leading-none">
           <b className="display text-[26px] font-semibold tracking-[-.02em]">Dars</b>
         </div>
